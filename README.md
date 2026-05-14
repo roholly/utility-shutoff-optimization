@@ -37,7 +37,10 @@ Medical exemptions, winter moratorium protections, and active payment plans were
 
 ## What This Demonstrates
 
-- End-to-end operational pipeline design: classify, prioritize, assign, route
-- Combining classification, regression, and optimization in sequence
-- Constraint design that reflects real regulatory and ethical requirements
-- Thinking about what happens after the model, not just the output
+The interesting thing about this problem is how much is hiding underneath what sounds like a simple operational question. Late bills don't automatically mean shutoff, and they shouldn't. Someone working two jobs who fell behind during a hard month is a fundamentally different situation than someone who could pay and hasn't. Getting that classification wrong has real consequences in both directions.
+
+And the stakes aren't abstract. Shutting off power to someone on a medical device, or heat to a family during a cold snap, or air conditioning to an elderly person in an Austin summer isn't a billing error. It's a potentially life-threatening decision. The ethical constraints in this framework aren't afterthoughts. They're load-bearing.
+
+Each of the four steps is a deep problem on its own. Classification has to distinguish ability to pay from willingness. Prioritization has to weigh recovery probability against the cost of being wrong. Crew assignment and route optimization sound like logistics, but they directly determine how many shutoffs are feasible in a given month, which affects everything upstream.
+
+The question isn't just who to shut off. It's whether shutoff is even the right decision, and if so, for whom, in what order, at what cost.
